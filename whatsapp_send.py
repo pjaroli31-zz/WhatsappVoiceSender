@@ -9,8 +9,9 @@ def sender(mess):
 	browser.get("https://web.whatsapp.com/")
 	print("Sending...............")
 	wait = WebDriverWait(browser,600)
-	#list of contacts u need to send put them all right here ...PUT IN ALL YOUR CONTACTS HERE 
-	contacts = ["Chotu Didi","Moksh"]
+	#list of contacts u need to send put them all right here ...PUT IN ALL YOUR CONTACTS HERE
+	#Python is case sensitive please type names correctly between " "
+	contacts = ["Name1","Name2"]
 	for contact in contacts:
 		x_path = '//span[contains(@title,"'+contact+'")]'
 		group_title = wait.until(EC.presence_of_element_located((By.XPATH, x_path)))

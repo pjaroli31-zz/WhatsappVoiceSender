@@ -7,7 +7,7 @@ from selenium.common.exceptions import TimeoutException
 def sender(mess):
 	browser = webdriver.Firefox(executable_path='./geckodriver');
 	browser.get("https://web.whatsapp.com/")
-	print("Sending...............")
+	print "Sending..............."
 	wait = WebDriverWait(browser,600)
 	#list of contacts u need to send put them all right here ...PUT IN ALL YOUR CONTACTS HERE
 	#Python is case sensitive please type names correctly between " "
@@ -20,5 +20,5 @@ def sender(mess):
 		inp_xpath = '//div[@class="_2S1VP copyable-text selectable-text"][@dir="ltr"][@data-tab="1"]'
 		input_box = wait.until(EC.presence_of_element_located((By.XPATH, inp_xpath)))
 		input_box.send_keys(mess + Keys.ENTER)
-		print("sent message to : " + contact)
+		print "sent message to : " + contact 
 

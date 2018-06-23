@@ -5,7 +5,7 @@ def record():
 	r = sr.Recognizer()
 	#r.energy_threshold = 500
 	with sr.Microphone() as source:
-		print(say something.......')
+		print('say something.......')
 		audio = r.listen(source)
 
 
